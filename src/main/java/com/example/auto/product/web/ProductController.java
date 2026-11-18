@@ -61,7 +61,7 @@ public class ProductController {
                 .body(photo);
     }
 
-    @PostMapping
+    @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity<ProductResponseDto> createProduct(
             @RequestParam String name,
             @RequestParam String category,
